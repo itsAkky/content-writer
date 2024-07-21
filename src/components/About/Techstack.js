@@ -1,71 +1,75 @@
-import React from "react";
-import { Col, Row } from "react-bootstrap";
-import { CgCPlusPlus } from "react-icons/cg";
-import {
-  DiJavascript1,
-  DiReact,
-  DiNodejs,
-  DiMongodb,
-  DiPython,
-  DiGit,
-  DiJava,
-} from "react-icons/di";
-import {
-  SiRedis,
-  SiFirebase,
-  SiNextdotjs,
-  SiSolidity,
-  SiPostgresql,
-} from "react-icons/si";
-import { TbBrandGolang } from "react-icons/tb";
+import React from 'react';
+import { Row, Col } from 'react-bootstrap';
+import { FaPen, FaSearchDollar, FaBrain, FaLightbulb, FaChartLine, FaClock, FaComments, FaUserCheck, FaDesktop } from 'react-icons/fa';
+// import "./Techstack.css";
+import "../../../src/Techstack.css";
 
-function Techstack() {
+import { TbBrandGolang, TbSeo } from "react-icons/tb";
+const Techstack = () => {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
+        <div className="icon-container">
+          <TbSeo />
+          <span className="icon-text">SEO</span>
+        </div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
+        <div className="icon-container">
+          <FaPen />
+          <span className="icon-text">Writing</span>
+        </div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <TbBrandGolang />
+        <div className="icon-container">
+          <FaSearchDollar />
+          <span className="icon-text">SEO Knowledge</span>
+        </div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
+        <div className="icon-container">
+          <FaBrain />
+          <span className="icon-text">Content Strategy</span>
+        </div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
+        <div className="icon-container">
+          <FaLightbulb />
+          <span className="icon-text">Creativity</span>
+        </div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiSolidity />
+        <div className="icon-container">
+          <FaChartLine />
+          <span className="icon-text">Analytical Thinking</span>
+        </div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
+        <div className="icon-container">
+          <FaClock />
+          <span className="icon-text">Time Management</span>
+        </div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
+        <div className="icon-container">
+          <FaComments />
+          <span className="icon-text">Communication</span>
+        </div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
+        <div className="icon-container">
+          <FaUserCheck />
+          <span className="icon-text">Audience Engagement</span>
+        </div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiRedis />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
+        <div className="icon-container">
+          <FaDesktop />
+          <span className="icon-text">Digital Content Creation</span>
+        </div>
       </Col>
     </Row>
   );
-}
+};
 
 export default Techstack;

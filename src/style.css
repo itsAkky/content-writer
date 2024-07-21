@@ -12,10 +12,16 @@ html {
   );
 
   --imp-text-color: #c770f0;
+
+  --imp-red-text-color: #9b1c10;
 }
 
 .purple {
   color: var(--imp-text-color) !important;
+}
+
+.redErr {
+  color: var(--imp-red-text-color) !important;
 }
 
 button:focus {
@@ -740,4 +746,9 @@ button:focus {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+.contact-label {
+  text-align: left;
+  display : block
 }

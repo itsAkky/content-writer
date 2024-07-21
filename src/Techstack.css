@@ -1,0 +1,23 @@
+.icon-container {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icon-container .icon-text {
+  display: none;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.icon-container:hover .icon-text {
+  display: block;
+}
