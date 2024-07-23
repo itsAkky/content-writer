@@ -1,66 +1,52 @@
-// import React from "react";
-// import { Col, Row } from "react-bootstrap";
-// import {
-//   SiVisualstudiocode,
-//   SiPostman,
-//   SiSlack,
-//   SiVercel,
-//   SiMacos,
-// } from "react-icons/si";
-
-// function Toolstack() {
-//   return (
-//     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-//       <Col xs={4} md={2} className="tech-icons">
-//         <SiMacos />
-//       </Col>
-//       <Col xs={4} md={2} className="tech-icons">
-//         <SiVisualstudiocode />
-//       </Col>
-//       <Col xs={4} md={2} className="tech-icons">
-//         <SiPostman />
-//       </Col>
-//       <Col xs={4} md={2} className="tech-icons">
-//         <SiSlack />
-//       </Col>
-//       <Col xs={4} md={2} className="tech-icons">
-//         <SiVercel />
-//       </Col>
-//     </Row>
-//   );
-// }
-
-// export default Toolstack;
-
-
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { FaWordpress, FaTrello, FaGoogleDrive, FaDropbox, FaSlack, FaBuffer, FaEvernote } from 'react-icons/fa';
-// import './Toolsstack.css'; // Import your CSS file for custom styling
 import "../../../src/Toolsstack.css";
+import Grum from '../../Assets/grum.png';
+
 
 const Toolsstack = () => {
-  // Array of tools with corresponding icons
   const tools = [
-    { icon: <FaWordpress />, text: 'WordPress' },
-    { icon: <FaTrello />, text: 'Trello' },
-    { icon: <FaGoogleDrive />, text: 'Google Drive' },
-    { icon: <FaDropbox />, text: 'Dropbox' },
-    { icon: <FaSlack />, text: 'Slack' },
-    { icon: <FaBuffer />, text: 'Buffer' },
-    { icon: <FaEvernote />, text: 'Evernote' },
+    { icon: <FaWordpress />, text: 'WordPress', url: 'https://wordpress.org/' },
+    { icon: <FaTrello />, text: 'Trello', url: 'https://trello.com/' },
+    { icon: <FaGoogleDrive />, text: 'Google Drive', url: 'https://drive.google.com/' },
+    { icon: <FaDropbox />, text: 'Dropbox', url: 'https://www.dropbox.com/' },
+    { icon: <FaSlack />, text: 'Slack', url: 'https://slack.com/' },
+    { icon: <FaBuffer />, text: 'Buffer', url: 'https://buffer.com/' },
+    { icon: <FaEvernote />, text: 'Evernote', url: 'https://evernote.com/' },
   ];
 
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       {tools.map((tool, index) => (
         <Col key={index} xs={4} md={2} className="tech-icons">
-          <div className="tool-container">
-            {tool.icon}
-            <span className="tool-text">{tool.text}</span>
-          </div>
+          <a href={tool.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className="tool-container">
+              {tool.icon}
+              <span className="tool-text">{tool.text}</span>
+            </div>
+          </a>
         </Col>
       ))}
+      
+      <Col xs={4} md={2} className="tech-icons">
+        <a href="https://grum.co/" target="_blank" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <div className="tool-container">
+            <img src={Grum}className="img-fluid" alt="avatar" width={"100px"} height={"100px"}/>
+            <span className="tool-text">Grum</span>
+          </div>
+        </a>
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <a href="https://thebacklinksagency.com/" target="_blank" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <div className="tool-container">
+            <span>𝗧</span>
+            <span className="tool-text">The Backlinks Agency</span>
+          </div>
+        </a>
+      </Col>
+
     </Row>
   );
 };
