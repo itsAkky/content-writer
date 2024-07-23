@@ -9,7 +9,7 @@
 
 ## Built With
 
-Visit my github profile<a href="https://github.com/itsAkky/" target="_blank">profile</a> <br/>
+Visit my github <a href="https://github.com/itsAkky/" target="_blank"> profile</a> <br/>
 
 This project was built using these technologies.
 
